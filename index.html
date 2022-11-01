@@ -5,22 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>현대엘리베이터 실습 02 - javascript</title>
+    <title>현대엘리베이트 실습 - javascript</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/main.css">
 
+
 </head>
 
 <body>
+    <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
     <div class="Wrap">
-        <header class="Header">
+        <header class="Header row">
             <div class="TopBanner">
                 <div class="w1200">
                     <h2>
-                        현대엘리베이터 스마트 테크놀로지 체험 <span>Green Technology</span>
+                        현대엘리베이트 스마트 테크놀로지 체험 <span>Green Technology</span>
                     </h2>
-                    <p>현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.</p>
+                    <p>
+                        현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.
+                    </p>
                     <div class="top_close_btn">
                         <i class="xi-close"></i>
                     </div>
@@ -57,6 +61,7 @@
                     <div class="top_search">
                         <strong><i class="xi-search"></i></strong>
                         <div class="search_box">
+
                             <form action="#!">
                                 <input type="text" placeholder="검색어를 입력하세요" required>
                                 <button>
@@ -67,11 +72,12 @@
                     </div>
                 </div>
             </div>
+
         </header>
         <section class="MainVisual">
             <div class="main_slider swiper">
                 <div class="swiper-wrapper">
-                    <figure class="swiper-slide itm01">
+                    <figure class="swiper-slide itm01" data-swiper-parallax="50%">
                         <div class="w1200">
                             <h2>
                                 현대엘리베이트 스마트 테크놀로지 체험 <span>Green Technology</span>
@@ -82,7 +88,7 @@
                             <a href="">바로가기</a>
                         </div>
                     </figure>
-                    <figure class="swiper-slide itm02">
+                    <figure class="swiper-slide itm02" data-swiper-parallax="50%">
                         <div class="w1200">
                             <h2>
                                 현대엘리베이트 스마트 테크놀로지 체험 <span>Green Technology</span>
@@ -93,7 +99,7 @@
                             <a href="">바로가기</a>
                         </div>
                     </figure>
-                    <figure class="swiper-slide itm03">
+                    <figure class="swiper-slide itm03" data-swiper-parallax="50%">
                         <div class="w1200">
                             <h2>
                                 현대엘리베이트 스마트 테크놀로지 체험 <span>Green Technology</span>
@@ -107,19 +113,20 @@
                 </div>
             </div>
             <ul class="slide_dots">
-                <li class="on"><span>slide01</span></li>
-                <li><span>slide02xxx</span></li>
-                <li><span>slide03</span></li>
+                <li class="on"><span>BIFC 부산국제금융센터</span></li>
+                <li><span>바라얍 메르디안 호텔(터키)</span></li>
+                <li><span></span></li>
             </ul>
             <div class="slide_handler">
                 <button class="prev">prev</button>
                 <button class="next">next</button>
             </div>
             <div class="main_slider_num"></div>
+
         </section>
         <section class="MainContent sc">
             <h2>사람과 사람을 연결하는 종합 승강기 기업</h2>
-            <p class="tit">최고의 기술과 서비스로 관리하고 풍요로운 세상을 만들어갑니다.</p>
+            <p class="tit">최고의 기술과 서비스로 편리하고 풍요로운 세상을 만들어갑니다.</p>
             <div class="inner">
                 <figure>
                     <div class="thumb">
@@ -128,31 +135,37 @@
                     <div class="des">
                         엘리베이터
                     </div>
-                    <p>단순한 수직운송수단을 넘어 빌딩의 가치를<br />
-                        높여 드립니다.</p>
-                    <a href="#!" class="btn_s01">자세히 보기 <i class="xi-angle-right"></i></a>
+                    <p>
+                        단순한 수직운송수단을 넘어 빌딩의 가치를<br />
+                        높여 드립니다.
+                    </p>
+                    <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
                 </figure>
                 <figure>
                     <div class="thumb">
                         <img src="./assets/section1_2.jpg" alt="">
                     </div>
                     <div class="des">
-                        에스컬레이터 & 무빙워크
+                        엘리베이터
                     </div>
-                    <p>편안한 승차감과 안전성, 경제성으로 최고의<br />
-                        고객감동을 실현합니다.</p>
-                    <a href="#!" class="btn_s01">자세히 보기 <i class="xi-angle-right"></i></a>
+                    <p>
+                        단순한 수직운송수단을 넘어 빌딩의 가치를<br />
+                        높여 드립니다.
+                    </p>
+                    <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
                 </figure>
                 <figure>
                     <div class="thumb">
                         <img src="./assets/section1_3.jpg" alt="">
                     </div>
                     <div class="des">
-                        주차시스템
+                        엘리베이터
                     </div>
-                    <p>다양한 제품으로 주차 공간 확보에 대한<br />
-                        고민을 해결해 드립니다.</p>
-                    <a href="#!" class="btn_s01">자세히 보기 <i class="xi-angle-right"></i></a>
+                    <p>
+                        단순한 수직운송수단을 넘어 빌딩의 가치를<br />
+                        높여 드립니다.
+                    </p>
+                    <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
                 </figure>
             </div>
         </section>
@@ -162,69 +175,98 @@
                     <div class="portfolio_left_slide swiper">
                         <div class="swiper-wrapper">
                             <figure class="swiper-slide">
-                                <img src="./assets/hd02.jpg" alt="">
+                                <img src="./assets/main_m01.jpg" alt="">
                                 <strong>서울드래곤시티</strong>
                             </figure>
                             <figure class="swiper-slide">
-                                <img src="./assets/hd03.jpg" alt="">
+                                <img src="./assets/main_m02.jpg" alt="">
                                 <strong>서울드래곤시티</strong>
                             </figure>
                             <figure class="swiper-slide">
-                                <img src="./assets/hd04.jpg" alt="">
+                                <img src="./assets/main_m03.jpg" alt="">
                                 <strong>서울드래곤시티</strong>
                             </figure>
                             <figure class="swiper-slide">
-                                <img src="./assets/hd05.jpg" alt="">
+                                <img src="./assets/main_m04.jpg" alt="">
                                 <strong>서울드래곤시티</strong>
                             </figure>
                             <figure class="swiper-slide">
-                                <img src="./assets/hd06.jpg" alt="">
+                                <img src="./assets/main_m05.jpg" alt="">
                                 <strong>서울드래곤시티</strong>
                             </figure>
                             <figure class="swiper-slide">
-                                <img src="./assets/hd01.jpg" alt="">
+                                <img src="./assets/main_m06.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m07.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m08.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m09.jpg" alt="">
                                 <strong>서울드래곤시티</strong>
                             </figure>
                         </div>
                     </div>
+
                 </div>
                 <div class="right">
                     <div class="title">
-                        <h2>건물의 가치를 높이는 현대엘리베이터</h2>
+                        <h2>건물의 가치를 높이는 현대엘리베이터 </h2>
                         <p class="tit">특별한 기술을 실현할수록 여러분의 삶의 무대도 특별해 집니다.</p>
                         <div class="slide_handler">
                             <i class="xi-angle-left prev"></i>
                             <i class="xi-angle-right next"></i>
                         </div>
                     </div>
+
                     <div class="portfolio_right_slide swiper">
                         <div class="swiper-wrapper">
                             <figure class="swiper-slide">
-                                <img src="./assets/hd01.jpg" alt="">
+                                <img src="./assets/main_m01.jpg" alt="">
                                 <strong>서울드래곤시티</strong>
                             </figure>
                             <figure class="swiper-slide">
-                                <img src="./assets/hd02.jpg" alt="">
+                                <img src="./assets/main_m02.jpg" alt="">
                                 <strong>서울드래곤시티</strong>
                             </figure>
                             <figure class="swiper-slide">
-                                <img src="./assets/hd03.jpg" alt="">
+                                <img src="./assets/main_m03.jpg" alt="">
                                 <strong>서울드래곤시티</strong>
                             </figure>
                             <figure class="swiper-slide">
-                                <img src="./assets/hd04.jpg" alt="">
+                                <img src="./assets/main_m04.jpg" alt="">
                                 <strong>서울드래곤시티</strong>
                             </figure>
                             <figure class="swiper-slide">
-                                <img src="./assets/hd05.jpg" alt="">
+                                <img src="./assets/main_m05.jpg" alt="">
                                 <strong>서울드래곤시티</strong>
                             </figure>
                             <figure class="swiper-slide">
-                                <img src="./assets/hd06.jpg" alt="">
+                                <img src="./assets/main_m06.jpg" alt="">
                                 <strong>서울드래곤시티</strong>
                             </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m07.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m08.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m09.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </section>
@@ -337,8 +379,8 @@
                     <i class="xi-arrow-left prev"></i>
                     <i class="xi-arrow-right next"></i>
                 </div>
-                <ul class="solutio_dots">
-                    <li><a href="#!">01</a></li>
+                <ul class="solution_dots">
+                    <li class="on"><a href="#!">01</a></li>
                     <li><a href="#!">02</a></li>
                     <li><a href="#!">03</a></li>
                     <li><a href="#!">04</a></li>
@@ -378,7 +420,7 @@
             <div class="inner">
                 <figure>
                     <a href="#!">
-                        <img src="./assets/main_new01.jpg" alt="">
+                        <img src="./assets/main_news01.jpg" alt="">
                         <strong class="sort">
                             보도자료
                         </strong>
@@ -392,7 +434,7 @@
                 </figure>
                 <figure>
                     <a href="#!">
-                        <img src="./assets/main_new02.jpg" alt="">
+                        <img src="./assets/main_news02.jpg" alt="">
                         <strong class="sort">
                             보도자료
                         </strong>
@@ -406,7 +448,7 @@
                 </figure>
                 <figure>
                     <a href="#!">
-                        <img src="./assets/main_new03.jpg" alt="">
+                        <img src="./assets/main_news03.jpg" alt="">
                         <strong class="sort">
                             보도자료
                         </strong>
@@ -420,10 +462,9 @@
                 </figure>
             </div>
         </section>
-
         <footer class="Footer">
             <div class="ft_top">
-                <div class="inner row">
+                <div class="inner">
                     <ul class="left">
                         <li><a href="#!" class="mainColor">개인정보처리방침</a></li>
                         <li><a href="#!">윤리경영 사이버신문고</a></li>
@@ -450,17 +491,15 @@
                             <li><a href="">전자구매입찰</a></li>
                         </ul>
                         <ul class="link">
-                            <li><a href="">3m01</a></li>
-                            <li><a href="">3m02</a></li>
-                            <li><a href="">3m03</a></li>
-                            <li><a href="">3m04</a></li>
-                            <li><a href="">3m05</a></li>
+                            <li><a href="">인사정보시스템</a></li>
+                            <li><a href="">전자구매입찰</a></li>
+                            <li><a href="">현대글로벌 </a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="ft_bottom">
-                <div class="inner row">
+                <div class="inner">
                     <div class="left">
                         <address>충청북도 충주시 충주산단1로 128 현대엘리베이터</address>
                         <span>COPYRIGHT &copy; 2018 HYUNDAIELEVATOR CO.,LTD. ALL RIGHTS RESERVED</span>
@@ -482,25 +521,22 @@
         </footer>
     </div>
 
+
     <div class="to_top">
         <i class="xi-arrow-top"></i>
     </div>
-
-
     <div class="popup">
         <div class="pop_case">
             <div class="pop_con">
-                <img src="./assets/main_new02.jpg" alt="">
+                <img src="./assets/main_news02.jpg" alt="">
             </div>
-            <div class="pop_close">
+            <div class="pop_close row">
                 <input type="checkbox">
                 <span>오늘 하루 열지 않기</span>
                 <button>CLOSE</button>
             </div>
         </div>
     </div>
-
-
     <script src="https://www.youtube.com/iframe_api"></script>
     <script>
         var player;
@@ -509,7 +545,7 @@
                 height: '100%',
                 width: '100%',
                 playerVars: {
-                    autoplay: 1,
+                    autoplay: 0,
                     loop: 1,
                     controls: 0,
                     showinfo: 0,
@@ -544,14 +580,12 @@
 
 
     </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollToPlugin.min.js"></script>
+    <!-- 출처: https://www.biew.co.kr/entry/TweenMaxㆍGSAP-트윈맥스-제대로-배우기1-입문세팅방법?category=314309 [웹퍼블리싱 - 퍼블리싱 이야기 맑은커뮤니케이션:티스토리] -->
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
-
-    <script>
-        gsap.to('.test', 3, { padding: 1000 })
-    </script>
 </body>
+
 
 </html>

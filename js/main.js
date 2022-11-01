@@ -86,7 +86,9 @@ window.addEventListener('DOMContentLoaded', () => {
     // 두개 같이 돌아가는 슬라이드
     const PLS = new Swiper('.portfolio_left_slide', {
         loop: true,
+        speed: 500,
         effect: "fade",
+        allowTouchMove: false,
         fadeEffect: {
             crossFade: true,
         },
@@ -96,6 +98,15 @@ window.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 5,
         spaceBetween: 30,
     });
+
+    // PRS.controller.control = PLS;
+    //출처: https://www.biew.co.kr/entry/Swiper-슬라이드-Swiper-2개-연동과-제어Controller [웹퍼블리싱 - 퍼블리싱 이야기 맑은커뮤니케이션:티스토리]
+    //centeredSlides: true,
+
+    // 옆슬라이드로 이동하는 하는 거 같은 효과
+    PLS.controller.control = PRS;
+    PRS.controller.control = PLS;
+
 
     // 센터모드?
     const PCS = new Swiper('.portfolio_right_slide', {
@@ -113,10 +124,6 @@ window.addEventListener('DOMContentLoaded', () => {
         PLS.slidePrev();
         PRS.slidePrev();
     });
-
-    // 옆슬라이드로 이동하는 하는 거 같은 효과
-    PLS.controller.control = PRS;
-    PRS.controller.control = PLS;
 
 
     const SCBOX = document.querySelectorAll('.Solution .content_box>div');
@@ -143,7 +150,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
 
-
     document.querySelector('.Solution .slide_handler .next').addEventListener('click', () => {
         SCS.slideNext();
     });
@@ -151,46 +157,50 @@ window.addEventListener('DOMContentLoaded', () => {
         SCS.slidePrev();
     });
 
-
-
-    document.querySelector('.Solution .slide_handler .next').addEventListener('click', () => {
-        SCS.slideNext();
-    });
-    document.querySelector('.Solution .slide_handler .prev').addEventListener('click', () => {
-        SCS.slidePrev();
-    });
 
 
 
     // 솔루션 슬라이드 dots
-    const solutionDots = document.querySelectorAll('.solutio_dots>li'); //유사배열이고, 유사배열은 foreach 사용가능
+    const solutionDots = document.querySelectorAll('.solution_dots>li'); //유사배열이고, 유사배열은 foreach 사용가능
 
     solutionDots.forEach((it, idx) => {
-        it.addEventListener('click', () => {
+        it.addEventListener("click", () => {
             solutionDots.forEach(el => el.classList.remove('on'));
             it.classList.add('on');
             SCS.slideTo(idx);
-        });
+            console.log(SCS.realIndex)
+        })
     });
 
 
     // family link 연결하기
     document.querySelector('#FL').addEventListener('change', e => {
         let lnk = e.target.value;
-        lnk && window.open(lnk) // =  if (lnk) window.open(lnk)
-    })
+        lnk && window.open(lnk)
+    });
 
 
     // to_top 스크롤
-    document.querySelector('.to_top').addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' }) //scrollTo는 함수
-        gsap.to(window, { duration: 0.5, scrollTo0 })
-    })
+    document.querySelector('.to_top').addEventListener('click', function () {
+        //window.scrollTo({ top: 0, behavior: 'smooth' }) //scrollTo는 함수다.
+        gsap.to(window, { duration: 0.5, scrollTo: 0 });
+
+    });
 
     const LINK_LI = document.querySelectorAll('.ft_top .right li');
-    const LINK_CON = document.querySelectorAll('.ft_top .right .link');
+    const LINK_CON = document.querySelectorAll('.ft_top .content .link');
 
     console.log(LINK_LI, LINK_CON);
+
+
+    // if ($(this).hasClass('on')) {
+    //     $(this).removeClass('on');
+    //     $('.Footer .ft_top .content>ul').eq(idx).removeClass('on')
+    // } else {
+    //     $(this).addClass('on').siblings().removeClass('on');
+    //     $('.Footer .ft_top .content>ul').eq(idx).addClass('on').siblings().removeClass('on');
+    // }
+
 
     LINK_LI.forEach((it, idx) => {
         it.addEventListener('click', () => {
@@ -203,29 +213,46 @@ window.addEventListener('DOMContentLoaded', () => {
                 LINK_CON.forEach(el => el.classList.remove('on'));
                 LINK_CON[idx].classList.add('on');
             }
-        });
+        })
     });
-    console.log(document.cookie);
 
+    // 쿠키
     const COOKIE = document.cookie;
     if (!COOKIE) {
         document.querySelector('.popup').style.display = 'block';
     }
-    document.querySelector('.popup button').addEventListener('click', function () {
-        document.querySelector('.popup').style.display = 'none'
-    })
-    document.querySelector('.popup input').addEventListener('change', () => {
-        const d = new Date();
-        d.setDate(d.getTime() + 60 * 1000);
-        let expires = "expires" + d.toUTCString();
-        document.cookie = `name=pop; expires=$(date); path=/`;
+
+    document.querySelector('.popup button').addEventListener('click', () => {
         document.querySelector('.popup').style.display = 'none';
+    });
+
+    // function setCookie(cname, cvalue, exdays) {
+    //     const d = new Date();
+    //     d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    //     let expires = "expires="+ d.toUTCString();
+    //     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    //   }
+
+    // setCookie('name', 'popup', 1)
+
+    document.querySelector('.popup input').addEventListener('change', () => {
+        // setCookie('name', 'popup', 1)
+        const date = new Date();
+        date.setTime(date.getTime() + (24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = "name=popup;" + expires + ";path=/";
+        document.querySelector('.popup').style.display = 'none';
+    });
+
+    document.querySelector('.popup').addEventListener('wheel', e => {
+        e.preventDefault();
     })
+
 
 
     //
-});
 
+});
 
 
 
